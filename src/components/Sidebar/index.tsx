@@ -10,6 +10,7 @@ import {
 } from "react-ionicons";
 
 const Sidebar = () => {
+     // Array containing navigation links with title, icon, and active status
 	const navLinks = [
 		{
 			title: "Home",
@@ -91,11 +92,13 @@ const Sidebar = () => {
 	];
 	return (
 		<div className="fixed left-0 top-0 md:w-[230px] w-[60px] overflow-hidden h-full flex flex-col">
+            {/* Top section of the sidebar */}
 			<div className="w-full flex items-center md:justify-start justify-center md:pl-5 h-[70px] bg-[#fff]">
 				<span className="hidden text-2xl font-semibold text-orange-400 md:block">Logo.</span>
 				<span className="block text-2xl font-semibold text-orange-400 md:hidden">L.</span>
 			</div>
 			<div className="w-full h-[calc(100vh-70px)] border-r flex flex-col md:items-start items-center gap-2 border-slate-300 bg-[#fff] py-5 md:px-3 px-3 relative">
+             {/* Mapping over navigation links to render them */}
 				{navLinks.map((link) => {
 					return (
 						<div
