@@ -4,7 +4,7 @@
 1. Mugo Joseph Wamiti 
 ****
 ## Project Description
-
+A task management solution with a visual board interface. Users can organize tasks into different columns (e.g., Backlog, Pending, Done) and track them using features like drag-and-drop, task prioritization, and deadline management. 
 
 ******
 *****
