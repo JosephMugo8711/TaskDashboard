@@ -17,7 +17,7 @@ const Navbar = () => {
 					height={"28px"}
 				/>
 				<span className="text-sm font-semibold text-orange-400 md:text-lg whitespace-nowrap">
-					Board Name
+					VillaTech
 				</span>
 				<ChevronDown
 					color="#fb923c"

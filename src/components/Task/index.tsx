@@ -7,17 +7,24 @@ interface TaskProps {
 	provided: any;
 }
 
+// Task component displays a single task item
 const Task = ({ task, provided }: TaskProps) => {
+	// Destructure task object
 	const { title, description, priority, deadline, image, alt, tags } = task;
 
 	return (
 		<div
+		// Use ref for drag-and-drop functionality
+		//Props for draggable element
+		// Props for drag handle
+		// 
 			ref={provided.innerRef}
 			{...provided.draggableProps}
 			{...provided.dragHandleProps}
 			className="w-full cursor-grab bg-[#fff] flex flex-col justify-between gap-3 items-start shadow-sm rounded-xl px-3 py-4"
 		>
 			{image && alt && (
+				// 	 Render image if available
 				<img
 					src={image}
 					alt={alt}
@@ -49,6 +56,7 @@ const Task = ({ task, provided }: TaskProps) => {
 					/>
 					<span className="text-[13px] text-gray-700">{deadline} mins</span>
 				</div>
+				{/* Priority indicator */}
 				<div
 					className={`w-[60px] rounded-full h-[5px] ${
 						priority === "high"

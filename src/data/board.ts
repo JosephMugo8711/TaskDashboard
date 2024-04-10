@@ -5,14 +5,16 @@ import taskImage3 from "../assets/images/task3.jpg";
 import { Columns } from "../Types";
 import { getRandomColors } from "../helpers/getRandomColors";
 
+
+// Board object represents the columns and tasks in the task management board
 export const Board: Columns = {
 	backlog: {
 		name: "Backlog",
 		items: [
 			{
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "Train calisthenics",
+				description: "I will be training calisthenics (planche) ..",
 				priority: "medium",
 				deadline: 50,
 				image: taskImage2,
@@ -24,8 +26,8 @@ export const Board: Columns = {
 			},
 			{
 				id: uuidv4(),
-				title: "Admin Panel Back-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "cs50x",
+				description: "I will learn cs50 program ..",
 				priority: "low",
 				deadline: 50,
 				tags: [
@@ -40,8 +42,8 @@ export const Board: Columns = {
 		items: [
 			{
 				id: uuidv4(),
-				title: "Admin Panel Back-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "Dashboard",
+				description: "Develop a dashboard..",
 				priority: "high",
 				deadline: 50,
 				tags: [
@@ -51,8 +53,8 @@ export const Board: Columns = {
 			},
 			{
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "Codility Test",
+				description: "I will do two codility tests ..",
 				priority: "low",
 				deadline: 50,
 				image: taskImage,
@@ -69,8 +71,8 @@ export const Board: Columns = {
 		items: [
 			{
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "Train Boxing",
+				description: "I will hit the bag and do shadow..",
 				priority: "medium",
 				deadline: 50,
 				image: taskImage3,
@@ -87,8 +89,8 @@ export const Board: Columns = {
 		items: [
 			{
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "Learning Nextjs",
+				description: "I will learn Nextjs ..",
 				priority: "low",
 				deadline: 50,
 				tags: [
@@ -98,8 +100,8 @@ export const Board: Columns = {
 			},
 			{
 				id: uuidv4(),
-				title: "Admin Panel Back-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "55-5 technique",
+				description: "Practice working 55 minutes rest 5 min. Like a boss ..",
 				priority: "medium",
 				deadline: 50,
 				tags: [
@@ -114,8 +116,8 @@ export const Board: Columns = {
 		items: [
 			{
 				id: uuidv4(),
-				title: "Admin Panel Front-end",
-				description: "Lorem ipsum dolor sit amet ..",
+				title: "Completed Task management dashboard",
+				description: "I have completed task management dashboard ..",
 				priority: "high",
 				deadline: 50,
 				image: taskImage,

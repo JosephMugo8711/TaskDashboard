@@ -1,14 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import { getRandomColors } from "../../helpers/getRandomColors";
 import { v4 as uuidv4 } from "uuid";
 
+// Interface for a tag
 interface Tag {
 	title: string;
 	bg: string;
 	text: string;
 }
 
+// Props interface for AddModal component
 interface AddModalProps {
 	isOpen: boolean;
 	onClose: () => void;
@@ -17,6 +18,7 @@ interface AddModalProps {
 }
 
 const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) => {
+	// Initialize task data with default values
 	const initialTaskData = {
 		id: uuidv4(),
 		title: "",
@@ -28,9 +30,13 @@ const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) =>
 		tags: [] as Tag[],
 	};
 
+	// State for managing task data
 	const [taskData, setTaskData] = useState(initialTaskData);
+
+	// State for managing tag title input
 	const [tagTitle, setTagTitle] = useState("");
 
+	// Handle change in input fields
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
 	) => {
@@ -38,6 +44,7 @@ const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) =>
 		setTaskData({ ...taskData, [name]: value });
 	};
 
+	// Handle change in image input
 	const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.files && e.target.files[0]) {
 			const reader = new FileReader();
@@ -50,6 +57,7 @@ const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) =>
 		}
 	};
 
+	// Handle adding a new tag
 	const handleAddTag = () => {
 		if (tagTitle.trim() !== "") {
 			const { bg, text } = getRandomColors();
@@ -59,12 +67,14 @@ const AddModal = ({ isOpen, onClose, setOpen, handleAddTask }: AddModalProps) =>
 		}
 	};
 
+	// Close the modal and reset task data
 	const closeModal = () => {
 		setOpen(false);
 		onClose();
 		setTaskData(initialTaskData);
 	};
 
+	// Handle form submission
 	const handleSubmit = () => {
 		handleAddTask(taskData);
 		closeModal();
