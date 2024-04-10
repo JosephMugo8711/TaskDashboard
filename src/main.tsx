@@ -1,26 +1,24 @@
-import { Suspense } from 'react' // Lazy loading in react
-import { BrowserRouter } from 'react-router-dom' // ROuting
-import { StyleSheetManager } from 'styled-components' // Manage styles in styled components
-import ReactDOM from 'react-dom/client' 
-import { createRoot } from 'react-dom';
-import App from './App.tsx'
-import './index.css'
+import { Suspense } from 'react'; // Lazy loading in react
+import { BrowserRouter } from 'react-router-dom'; // ROuting
+import { StyleSheetManager } from 'styled-components'; // Manage styles in styled components
+import ReactDOM from 'react-dom';
+import App from './App.tsx';
+import './index.css';
 
-// REnder app component into the root element in the dom
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.render(
   // Using suspense to provide a fallback component while components are loading asynchronously
   <Suspense fallback={<div>Loading...</div>}>
     {/* Provide routing functionality to your app */}
-     <BrowserRouter> 
-     {/* Using stylesheetmanager from styled-components to manage styles */}
-        <StyleSheetManager shouldForwardProp={(prop) => prop !== "shake"}>
-            <App />
-        </StyleSheetManager>
-     </BrowserRouter>
-  </Suspense>
-   
+    <BrowserRouter>
+      {/* Using stylesheetmanager from styled-components to manage styles */}
+      <StyleSheetManager shouldForwardProp={(prop) => prop !== 'shake'}>
+        <App />
+      </StyleSheetManager>
+    </BrowserRouter>
+  </Suspense>,
+  document.getElementById('root')
+);
 
-)
 
 
 
