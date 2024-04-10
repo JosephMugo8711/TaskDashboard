@@ -2,6 +2,7 @@ import { Suspense } from 'react' // Lazy loading in react
 import { BrowserRouter } from 'react-router-dom' // ROuting
 import { StyleSheetManager } from 'styled-components' // Manage styles in styled components
 import ReactDOM from 'react-dom/client' 
+import { createRoot } from 'react-dom';
 import App from './App.tsx'
 import './index.css'
 
