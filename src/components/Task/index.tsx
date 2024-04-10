@@ -17,7 +17,6 @@ const Task = ({ task, provided }: TaskProps) => {
 		// Use ref for drag-and-drop functionality
 		//Props for draggable element
 		// Props for drag handle
-		// 
 			ref={provided.innerRef}
 			{...provided.draggableProps}
 			{...provided.dragHandleProps}
