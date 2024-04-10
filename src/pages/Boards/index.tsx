@@ -46,7 +46,6 @@ const Home = () => {
 							className="flex flex-col w-full gap-0"
 							key={columnId}
 						>
-							{/* Droppable component for each column */}
 							<Droppable
 								droppableId={columnId}
 								key={columnId}
